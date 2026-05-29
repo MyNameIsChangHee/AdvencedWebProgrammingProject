@@ -1,0 +1,30 @@
+{{>layouts/header}}
+<link rel="stylesheet" href="/css/login.css">
+
+<div class="login-wrapper">
+    <div class="login-card">
+        <div class="brand-logo">당균</div>
+
+        <form action="/logincheck" method="post">
+            <div class="mb-3">
+                <label class="form-label text-muted small fw-bold">닉네임</label>
+                <input type="text" class="form-control form-control-lg" name="username" placeholder="닉네임을 입력하세요" required>
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label text-muted small fw-bold">비밀번호</label>
+                <input type="password" class="form-control form-control-lg" name="password" placeholder="비밀번호를 입력하세요" required>
+            </div>
+
+            <button type="submit" class="btn btn-orange btn-lg w-100 mb-3">로그인</button>
+
+            <div class="text-center mt-3">
+                <span class="text-muted small">아직 당균 회원이 아니신가요?</span>
+                <a href="/items/signup" class="text-decoration-none ms-2" style="color: #FF8A3D; font-weight: 600;">회원가입</a>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+{{>layouts/footer}}

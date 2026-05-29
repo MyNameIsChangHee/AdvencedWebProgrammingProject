@@ -1,0 +1,39 @@
+{{>layouts/header}}
+
+<div class="container mt-4">
+    <h2>새 물품 등록</h2>
+
+    <form action="/items/create" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label class="form-label">제목</label>
+            <input type="text" class="form-control" name="title">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">가격</label>
+            <input type="number" class="form-control" name="price">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">내용</label>
+            <textarea class="form-control" rows="5" name="content"></textarea>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">카테고리</label>
+            <select class="form-select" name="category">
+                <option value="">카테고리 선택</option>
+                <option value="전자기기">전자기기</option>
+                <option value="스포츠용품">스포츠용품</option>
+                <option value="완구">완구</option>
+                <option value="생활용품">생활용품</option>
+                <option value="의류">의류</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">이미지</label>
+            <input type="file" class="form-control" name="file" accept="image/*">
+        </div>
+        <button type="submit" class="btn btn-primary">등록하기</button>
+        <a href="/items" class="btn btn-secondary">뒤로가기</a>
+    </form>
+</div>
+
+{{>layouts/footer}}

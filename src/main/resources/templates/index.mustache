@@ -1,0 +1,58 @@
+{{>layouts/header}}
+
+
+<div class="content">
+    <div style="padding: 0 20%;">
+        <div class="row mt-4">
+            <div class="col-md-3 mb-4">
+                <div class="filter-section">
+                    <div class="filter-title" style="margin-bottom: 12px;">카테고리</div>
+                    <div class="d-flex flex-column">
+                        <a href="/items/전자기기" class="category-link">전자기기</a>
+                        <a href="/items/스포츠용품" class="category-link">스포츠용품</a>
+                        <a href="/items/완구" class="category-link">완구</a>
+                        <a href="/items/생활용품" class="category-link">생활용품</a>
+                        <a href="/items/의류" class="category-link">의류</a>
+                    </div>
+                    <a href="/items" class="category-link text-muted" style="text-align: center; font-size: 13px;">필터 초기화</a>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h4 style="font-weight: 700;">중고거래 물품</h4>
+                    <a href="/items/new" class="btn btn-sm" style="border: 1px solid #FF8A3D; color: #FF8A3D; font-weight: 600;">물품 등록하기</a>
+                </div>
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+                    {{#itemList}}
+                        <div class="col">
+                            <div class="card product-card h-100">
+                                <a href="/items/{{id}}/info">
+                                    {{#imageName}}
+                                        <img src="/images/{{imageName}}" class="card-img-top" style="height: 240px; object-fit: cover;" alt="상품이미지">
+                                    {{/imageName}}
+                                    {{^imageName}}
+                                        <div class="img-placeholder">이미지 준비중</div>
+                                    {{/imageName}}
+                                </a>
+                                <div class="card-body">
+                                    <div class="text-truncate" style="font-weight: 500; margin-bottom: 4px;">{{title}}</div>
+                                    <div class="product-price">{{price}}원</div>
+                                </div>
+                            </div>
+                        </div>
+                    {{/itemList}}
+
+                    {{^itemList}}
+                        <div class="col-12 text-center py-5">
+                            <p class="text-muted">등록된 물품이 없거나 필터 조건에 맞는 상품이 없습니다.</p>
+                        </div>
+                    {{/itemList}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{>layouts/footer}}

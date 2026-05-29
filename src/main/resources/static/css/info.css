@@ -1,0 +1,58 @@
+.info-wrapper {
+    padding: 0 20%;
+}
+
+.info-back-link {
+    color: #FF8A3D;
+    text-decoration: none;
+}
+
+.info-img-placeholder {
+    width: 100%;
+    height: 400px;
+    background-color: #f1f3f5;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #adb5bd;
+}
+
+.info-img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.info-title {
+    font-weight: 700;
+}
+
+.info-price {
+    color: #FF8A3D;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.info-content {
+    color: #4d4d4d;
+    line-height: 1.8;
+}
+
+.btn-buy {
+    background-color: #FF8A3D;
+    color: white;
+    font-weight: 600;
+}
+
+.btn-edit {
+    border: 1px solid #FF8A3D;
+    color: #FF8A3D;
+    font-weight: 600;
+}
+
+.btn-delete {
+    border: 1px solid red;
+    color: red;
+    font-weight: 600;
+}
